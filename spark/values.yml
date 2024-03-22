@@ -1,0 +1,25 @@
+# spark-values.yaml
+
+spark:
+  enabled: true
+
+  image:
+    repository: bitnami/spark
+    tag: 3.2.0-debian-10-r27
+
+  service:
+    type: ClusterIP
+
+  master:
+    replicas: 1
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "0.5"
+
+  worker:
+    replicas: 2
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "0.5"
